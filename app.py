@@ -1,11 +1,13 @@
 from calculate_func import do_addition , do_substraction
 from multiply import do_multiplication
+from area import calculate_area_rectangle
 def main():
     print("Welcome to the calculator app")
     print("""Select the function from the given options:
 1. ADD
 2. Substract
 3. Multiply
+4. Area
         """)
     
     user_input = input("Select the function;")
@@ -18,6 +20,8 @@ def main():
         result = do_substraction(a , b)
     elif user_input == '3':
         result = do_multiplication(a , b)
+    elif user_input == '4':
+        result = calculate_area_rectangle(a , b)
     else:
         print("Invalid Choice")
 
